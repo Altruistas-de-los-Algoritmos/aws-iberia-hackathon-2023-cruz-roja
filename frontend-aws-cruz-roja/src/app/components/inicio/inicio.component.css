@@ -1,0 +1,42 @@
+.linea-horizontal {
+    width: 50px;
+    height: 6px;
+    border-bottom: 6px solid red; /* puedes cambiar el color y grosor de la línea aquí */
+}
+.col-sizes{
+    height: 400px;
+}
+
+.text-images{
+    color: white;
+    font-size: 35px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 3s;
+}
+.text-images:hover{
+    background-color: rgba(226, 6, 19, 0.8);
+}
+
+.primera-infancia{
+    background-image: url('../../../assets/images/primera-infancia.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+.segunda-infancia{
+    background-image: url('../../../assets/images/segunda-infancia.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.adolecencia{
+    background-image: url('../../../assets/images/adolescencia.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.todas-edades{
+    background-image: url('../../../assets/images/todas-edades.jpg');
+    background-size: cover;
+    background-position: center center;
+}
