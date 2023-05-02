@@ -3,6 +3,10 @@
     margin: 7px;
 }
 
+.col-content{
+    height: 100px;
+}
+
 .col-content:hover {
     background-color: #E8B1AC;
 }
