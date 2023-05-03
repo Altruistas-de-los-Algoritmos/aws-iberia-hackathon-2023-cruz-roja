@@ -13,10 +13,9 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    transition: transform 3s;
 }
 .text-images:hover{
-    background-color: rgba(226, 6, 19, 0.8);
+    background-image: linear-gradient(to top,red,rgba(226, 6, 19, 0.2));
 }
 
 .primera-infancia{
