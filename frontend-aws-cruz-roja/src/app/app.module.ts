@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { AcogidaComponent } from './components/acogida/acogida.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AppComponent,
     NavBarComponent,
     InicioComponent,
-    AcogidaComponent
+    AcogidaComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

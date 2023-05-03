@@ -10,8 +10,12 @@ export class AcogidaComponent {
   faChevronLeft = faChevronLeft;
   faChevronRight = faChevronRight;
 
+  ocultaCarousel1: boolean = false;
+  ocultaCarousel2: boolean = true;
+  ocultaCarousel3: boolean = true;
+
   mensajesMap: Map<string, string> = new Map();
-  getCardInformation(identificator: string) {
+  getCardInformation(identificator: string, carousel:string) {
     switch (identificator) {
       case 'tarjeta1':
         this.mensajesMap.set('tarjeta1', 'Porque quiero ayudar a los niños');
@@ -74,6 +78,16 @@ export class AcogidaComponent {
         // Realizar acciones adicionales si es necesario
         break;
 
+    }
+
+    if (carousel == 'carousel1') {
+      this.ocultaCarousel1 = true;
+      this.ocultaCarousel2= false;
+    }
+
+    if (carousel == 'carousel2') {
+      this.ocultaCarousel2 = true;
+      this.ocultaCarousel3= false;
     }
 
     console.log(this.mensajesMap);
