@@ -15,3 +15,20 @@
 .fa-chevron-left{
     height: 50px;
 }
+
+.card-container {
+    height: 250px;
+    color: white;
+    background-color: #C4291C;
+}
+
+.card-container:hover {
+    background-color: black;
+}
+
+.text-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}

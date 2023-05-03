@@ -7,15 +7,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { AcogidaComponent } from './components/acogida/acogida.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { CardComponent } from './components/card/card.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     InicioComponent,
-    AcogidaComponent,
-    CardComponent
+    AcogidaComponent
   ],
   imports: [
     BrowserModule,
