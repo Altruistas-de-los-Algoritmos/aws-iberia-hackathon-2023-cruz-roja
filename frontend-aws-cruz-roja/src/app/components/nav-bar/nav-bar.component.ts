@@ -8,4 +8,5 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavBarComponent {
   faChevronDown = faChevronDown;
+  isActive: boolean = true; // Cambia este valor según el estado de tu componente
 }

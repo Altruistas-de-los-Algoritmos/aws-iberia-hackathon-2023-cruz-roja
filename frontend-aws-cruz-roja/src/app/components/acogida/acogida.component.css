@@ -1,0 +1,17 @@
+.carousel-control-prev,
+.carousel-control-next {
+    color: black;
+}
+
+.carousel-indicators {
+    bottom: -100px;
+}
+
+.chev-style{
+   color: black;
+   margin: 20px;
+}
+
+.fa-chevron-left{
+    height: 50px;
+}

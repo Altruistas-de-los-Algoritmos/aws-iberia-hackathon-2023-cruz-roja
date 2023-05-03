@@ -1,7 +1,7 @@
 <div class="container d-none d-md-block">
     <nav class="navbar navbar-expand-lg navbar-content p-0">
         <div class="col-3 col-content">
-            <a class="navbar-brand font-nav-logo d-flex justify-content-center" href="#"><img class="logo-cruz"
+            <a class="navbar-brand font-nav-logo d-flex justify-content-center" [routerLink]="'/main'"><img class="logo-cruz"
                     src="../../../assets/images/cruz roja.png" alt="">&nbsp;&nbsp;
                 <span class="p-3">Inicio</span></a>
         </div>
@@ -11,13 +11,13 @@
                 <div class="row">
                     <ul class="navbar-nav">
                         <li class="nav-item col-3 col-content">
-                            <a class="nav-link d-flex justify-content-center p-4 font-nav" href="#">Acogida</a>
+                            <a class="nav-link d-flex justify-content-center p-4 font-nav" [routerLink]="'/acogida'">Acogida</a>
                         </li>
                         <li class="nav-item col-3 col-content">
-                            <a class="nav-link d-flex justify-content-center p-4  font-nav" href="#">Valoraciones</a>
+                            <a class="nav-link d-flex justify-content-center p-4  font-nav" [routerLink]="'/main'">Valoraciones</a>
                         </li>
                         <li class="nav-item col-3 col-content">
-                            <a class="nav-link d-flex justify-content-center p-4  font-nav" href="#">Contacto</a>
+                            <a class="nav-link d-flex justify-content-center p-4  font-nav" [routerLink]="'/main'">Contacto</a>
                         </li>
                         <li class="nav-item col-3 col-content dropdown">
                             <a class="nav-link d-flex justify-content-center p-4  font-nav dropdown-toggle" href="#"
