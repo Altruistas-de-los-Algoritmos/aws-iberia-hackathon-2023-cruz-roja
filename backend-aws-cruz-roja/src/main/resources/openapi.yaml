@@ -1,0 +1,193 @@
+openapi: "3.0.3"
+info:
+  title: "aws_iberia_hackathon_2023_cruz_roja API"
+  description: "aws_iberia_hackathon_2023_cruz_roja API"
+  version: "1.0.0"
+servers:
+  - url: "https://localhost:8080"
+paths:
+  /api/v1/acogidas/{acogida_id}:
+    put:
+      summary: "PUT api/v1/acogidas/{acogida_id}"
+      operationId: "updateAcogida"
+      parameters:
+        - name: "acogida_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateAcogidaRequest"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/UpdateAcogidaResponse"
+    delete:
+      summary: "DELETE api/v1/acogidas/{acogida_id}"
+      operationId: "deleteAcogida"
+      parameters:
+        - name: "acogida_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/DeleteAcogidaResponse"
+    get:
+      summary: "GET api/v1/acogidas/{acogida_id}"
+      operationId: "getAcogida"
+      parameters:
+        - name: "acogida_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/GetAcogidaResponse"
+  /api/v1/acogidas:
+    post:
+      summary: "POST api/v1/acogidas"
+      operationId: "addAcogida"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AddAcogidaRequest"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/AddAcogidaResponse"
+    get:
+      summary: "GET api/v1/acogidas"
+      operationId: "getAcogidas"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/GetAcogidasResponse"
+components:
+  schemas:
+    FormQuestions:
+      type: "object"
+      properties:
+        question_id:
+          type: "string"
+        answer_id:
+          type: "string"
+    UpdateAcogidaRequest:
+      type: "object"
+      properties:
+        form_questions:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/FormQuestions"
+        name:
+          type: "string"
+        last_name:
+          type: "string"
+        email:
+          type: "string"
+        phone_number:
+          type: "string"
+        nif:
+          type: "string"
+        age:
+          type: "integer"
+          format: "int32"
+        gender:
+          type: "string"
+          enum:
+            - "MALE"
+            - "FEMALE"
+            - "OTHER"
+    UpdateAcogidaResponse:
+      type: "object"
+      properties: { }
+    AddAcogidaRequest:
+      type: "object"
+      properties:
+        form_questions:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/FormQuestions"
+        name:
+          type: "string"
+        last_name:
+          type: "string"
+        email:
+          type: "string"
+        phone_number:
+          type: "string"
+        nif:
+          type: "string"
+        age:
+          type: "integer"
+          format: "int32"
+        gender:
+          type: "string"
+          enum:
+            - "MALE"
+            - "FEMALE"
+            - "OTHER"
+    AddAcogidaResponse:
+      type: "object"
+      properties: { }
+    DeleteAcogidaResponse:
+      type: "object"
+      properties: { }
+    GetAcogidaResponse:
+      type: "object"
+      properties:
+        form_questions:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/FormQuestions"
+        name:
+          type: "string"
+        last_name:
+          type: "string"
+        email:
+          type: "string"
+        phone_number:
+          type: "string"
+        nif:
+          type: "string"
+        age:
+          type: "integer"
+          format: "int32"
+        gender:
+          type: "string"
+          enum:
+            - "MALE"
+            - "FEMALE"
+            - "OTHER"
+    GetAcogidasResponse:
+      type: "object"
+      properties:
+        result:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/GetAcogidaResponse"
