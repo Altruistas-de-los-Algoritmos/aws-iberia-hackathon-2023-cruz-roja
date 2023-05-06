@@ -15,81 +15,60 @@ export class AcogidaComponent {
   ocultaCarousel3: boolean = true;
 
   mensajesMap: Map<string, string> = new Map();
-  getCardInformation(identificator: string, carousel:string) {
-    switch (identificator) {
-      case 'tarjeta1':
-        this.mensajesMap.set('tarjeta1', 'Porque quiero ayudar a los niños');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta2':
-        this.mensajesMap.set('tarjeta2', 'Porque asi me siento mejor');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta3':
-        this.mensajesMap.set('tarjeta3', 'Quiero ayudar');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta4':
-        this.mensajesMap.set('tarjeta4', 'Son ellos el futuro');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta5':
-        this.mensajesMap.set('tarjeta5', 'No estoy seguro');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta6':
-        this.mensajesMap.set('tarjeta6', 'Quiero hacerme responsable');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta7':
-        this.mensajesMap.set('tarjeta7', 'Quiero brindar oportunidades');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta8':
-        this.mensajesMap.set('tarjeta8', 'Quiero dar un hogar');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta9':
-        this.mensajesMap.set('tarjeta9', 'Puedo dar apoyo alimenticio');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta10':
-        this.mensajesMap.set('tarjeta10', 'No estoy seguro');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjet11':
-        this.mensajesMap.set('tarjeta11', 'Acogimiento familiar de urgencia');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta12':
-        this.mensajesMap.set('tarjeta12', 'Temporal');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta13':
-        this.mensajesMap.set('tarjeta13', 'Permanente');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta14':
-        this.mensajesMap.set('tarjeta14', 'Especializado');
-        // Realizar acciones adicionales si es necesario
-        break;
-      case 'tarjeta15':
-        this.mensajesMap.set('tarjeta15', 'Profesional');
-        // Realizar acciones adicionales si es necesario
-        break;
-
+  
+  ngAfterViewInit(){
+    let messageJson: string | null = localStorage.getItem('carouselSelections');
+    if(messageJson !== null){
+      this.mensajesMap = new Map(JSON.parse(messageJson));
+      this.mensajesMap.forEach((tarjeta)=> {
+        console.log(tarjeta);
+          let element = document.getElementById(tarjeta);
+          console.log(element);
+          element?.classList.add('card-container-selected');
+      });
     }
+  }
 
-    if (carousel == 'carousel1') {
-      this.ocultaCarousel1 = true;
-      this.ocultaCarousel2= false;
-    }
+  paintCard(){
+    const selectedElements = document.querySelectorAll('.card-container-selected');
+      selectedElements.forEach ((elem) => {
+        elem.classList.remove('card-container-selected');
+      });
+    this.mensajesMap.forEach((tarjeta)=> {
+      if (tarjeta) {
+        let element = document.getElementById(tarjeta);
+        element?.classList.add('card-container-selected');
+      }
+    });
+  }
+  getCardInformation( carousel:string, tarjeta: string) {
+    this.mensajesMap.set(carousel, tarjeta);
+    this.paintCard();
+  }
 
-    if (carousel == 'carousel2') {
+  prevCarousel(carousel:string){
+    if(carousel=='carousel2'){
+      this.ocultaCarousel1 = false;
       this.ocultaCarousel2 = true;
-      this.ocultaCarousel3= false;
     }
+    if(carousel=='carousel3'){
+      this.ocultaCarousel2 = false;
+      this.ocultaCarousel3 = true;
+    }
+  }
 
-    console.log(this.mensajesMap);
+  nextCarousel(carousel:string){
+    if(carousel=='carousel1'){
+      this.ocultaCarousel1 = true;
+      this.ocultaCarousel2 = false;
+    }
+    if(carousel=='carousel2'){
+      this.ocultaCarousel2 = true;
+      this.ocultaCarousel3 = false;
+    }
+  }
+  saveFirstData(){
+    const saveJson = JSON.stringify(Array.from(this.mensajesMap.entries()));
+    localStorage.setItem('carouselSelections',saveJson);
   }
 }

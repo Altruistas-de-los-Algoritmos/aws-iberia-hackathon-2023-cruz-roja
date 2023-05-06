@@ -3,16 +3,16 @@
     color: black;
 }
 
-.carousel-indicators {
-    bottom: -100px;
+.carousel-control-prev{
+    
 }
 
-.chev-style{
-   color: black;
-   margin: 20px;
+.chev-style {
+    color: black;
+    margin: 20px;
 }
 
-.fa-chevron-left{
+.fa-chevron-left {
     height: 50px;
 }
 
@@ -22,9 +22,12 @@
     background-color: #C4291C;
 }
 
+.card-container-selected{
+    background-color: black;
+}
+
 .card-container:hover {
     cursor: pointer;
-    background-color: black;
 }
 
 .text-card {
@@ -33,3 +36,16 @@
     display: flex;
     align-items: center;
 }
+
+.boton-style {
+    background-color: white;
+    font-size: 50px;
+    margin: 20px 50px;
+    cursor: pointer;
+}
+
+.carousel-indicators {
+    bottom: 120px;
+}
+
+

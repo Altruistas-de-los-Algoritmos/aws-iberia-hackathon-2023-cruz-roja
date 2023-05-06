@@ -2,28 +2,23 @@
     <div class="carousel1" [ngClass]="{'d-none': ocultaCarousel1}">
         <h2 class="text-center mb-5">¿Por qué quieres acoger?</h2>
         <div id="carousel1" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <a class="chev-style" href="#carousel1" role="button" data-slide="prev">
-                    <fa-icon [icon]="faChevronLeft"></fa-icon>
-                </a>
-                <a class="chev-style" href="#carousel1" role="button" data-slide="next">
-                    <fa-icon [icon]="faChevronRight"></fa-icon>
-                </a>
-            </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta1', 'carousel1')">
-                                    <div class="card-body card-container">
+                                <div id="tarjeta1" class="card card-container"
+                                    (click)="getCardInformation('carousel1', 'tarjeta1')">
+                                    <div class="card-body">
                                         <h5 class="card-title text-center text-card justify-content-center">Porque
-                                            quiero ayudar a los niños</h5>
+                                            quiero
+                                            ayudar a los niños</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta2', 'carousel1')">
+                                <div id="tarjeta2" class="card card-container"
+                                    (click)="getCardInformation('carousel1', 'tarjeta2')">
                                     <div class="card-body">
                                         <h5 class="card-title text-center text-card justify-content-center">Porque asi
                                             me siento mejor</h5>
@@ -31,7 +26,8 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta3', 'carousel1')">
+                                <div id="tarjeta3" class="card card-container"
+                                    (click)="getCardInformation('carousel1', 'tarjeta3')">
                                     <div class="card-body">
                                         <h5 class="card-title text-center text-card justify-content-center">Quiero
                                             ayudar</h5>
@@ -45,15 +41,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta4', 'carousel1')">
-                                    <div class="card-body card-container">
-                                        <h5 class="card-title text-center text-card justify-content-center">Son ellos el
-                                            futuro</h5>
+                                <div id="tarjeta4" class="card card-container"
+                                    (click)="getCardInformation('carousel1', 'tarjeta3')">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-card justify-content-center">QPorque ellos son el fututo</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta5', 'carousel1')">
+                                <div id="tarjeta5" class="card card-container"
+                                    (click)="getCardInformation('carousel1', 'tarjeta5')">
                                     <div class="card-body">
                                         <h5 class="card-title text-center text-card justify-content-center">No estoy
                                             seguro</h5>
@@ -65,41 +62,49 @@
                 </div>
             </div>
         </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <a class="boton-style" (click)="prevCarousel('carousel1')">
+                <fa-icon [icon]="faChevronLeft"></fa-icon>
+            </a>
+            <a class="boton-style" (click)="nextCarousel('carousel1')">
+                <fa-icon [icon]="faChevronRight"></fa-icon>
+            </a>
+        </div>
+
     </div>
 
     <div class="carousel2" [ngClass]="{'d-none': ocultaCarousel2}">
         <h2 class="text-center mb-5">¿Que puedes aportar?</h2>
         <div id="carousel2" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <a class="chev-style" href="#carousel2" role="button" data-slide="prev">
-                    <fa-icon [icon]="faChevronLeft"></fa-icon>
-                </a>
-                <a class="chev-style" href="#carousel2" role="button" data-slide="next">
-                    <fa-icon [icon]="faChevronRight"></fa-icon>
-                </a>
-            </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta6', 'carousel2')">
-                                    <div class="card-body card-container">
-                                        <h5 class="card-title text-center text-card justify-content-center">Quiero hacerme responsable</h5>
+                                <div id="tarjeta6" class="card card-container"
+                                    (click)="getCardInformation('carousel2', 'tarjeta6')">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-card justify-content-center">Porque asi
+                                            me siento mejor</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta7', 'carousel2')">
+                                <div id="tarjeta7" class="card card-container"
+                                    (click)="getCardInformation('carousel2', 'tarjeta7')">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center text-card justify-content-center">Quiero brindar oportunidades</h5>
+                                        <h5 class="card-title text-center text-card justify-content-center">Quiero
+                                            brindar oportunidades</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta8', 'carousel2')">
+                                <div id="tarjeta8" class="card card-container"
+                                    (click)="getCardInformation('carousel2', 'tarjeta8')">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center text-card justify-content-center">Quiero dar un hogar</h5>
+                                        <h5 class="card-title text-center text-card justify-content-center">Quiero dar
+                                            un hogar</h5>
                                     </div>
                                 </div>
                             </div>
@@ -110,16 +115,19 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta9', 'carousel2')">
-                                    <div class="card-body card-container">
-                                        <h5 class="card-title text-center text-card justify-content-center">Puedo dar apoyo alimienticio</h5>
+                                <div id="tarjeta9" class="card card-container"
+                                    (click)="getCardInformation('carousel1', 'tarjeta3')">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-card justify-content-center">Quiero alimentar</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta10','carousel2')">
+                                <div id="tarjeta10" class="card card-container"
+                                    (click)="getCardInformation('carousel2','tarjeta10')">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center text-card justify-content-center">No estoy seguro</h5>
+                                        <h5 class="card-title text-center text-card justify-content-center">No estoy
+                                            seguro</h5>
                                     </div>
                                 </div>
                             </div>
@@ -128,41 +136,49 @@
                 </div>
             </div>
         </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <a class="boton-style" (click)="prevCarousel('carousel2')">
+                <fa-icon [icon]="faChevronLeft"></fa-icon>
+            </a>
+            <a class="boton-style" (click)="nextCarousel('carousel2')">
+                <fa-icon [icon]="faChevronRight"></fa-icon>
+            </a>
+        </div>
+
     </div>
 
     <div class="carousel3" [ngClass]="{'d-none': ocultaCarousel3}">
         <h2 class="text-center mb-5">¿Que tipo de acogimiento deseas brindar?</h2>
         <div id="carousel3" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <a class="chev-style" href="#carousel3" role="button" data-slide="prev">
-                    <fa-icon [icon]="faChevronLeft"></fa-icon>
-                </a>
-                <a class="chev-style" href="#carousel3" role="button" data-slide="next">
-                    <fa-icon [icon]="faChevronRight"></fa-icon>
-                </a>
-            </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta11', 'carousel3')" [routerLink]="'/formulario'">
-                                    <div class="card-body card-container">
-                                        <h5 class="card-title text-center text-card justify-content-center">Acogimiento familiar de urgencia</h5>
+                                <div id="tarjeta11" class="card card-container"
+                                    (click)="getCardInformation('carousel3', 'tarjeta11')">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-card justify-content-center">Urgente
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta12', 'carousel3')" [routerLink]="'/formulario'">
+                                <div id="tarjeta12" class="card card-container"
+                                    (click)="getCardInformation('carousel3', 'tarjeta12')">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center text-card justify-content-center">Temporal</h5>
+                                        <h5 class="card-title text-center text-card justify-content-center">Temporal
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta13', 'carousel3')" [routerLink]="'/formulario'">
+                                <div id="tarjeta13" class="card card-container"
+                                    (click)="getCardInformation('carousel3', 'tarjeta13')">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center text-card justify-content-center">Permanente</h5>
+                                        <h5 class="card-title text-center text-card justify-content-center">Permanente
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
@@ -173,16 +189,20 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta14', 'carousel3')" [routerLink]="'/formulario'">
+                                <div id="tarjeta14" class="card card-container"
+                                    (click)="getCardInformation('carousel3', 'tarjera14')">
                                     <div class="card-body card-container">
-                                        <h5 class="card-title text-center text-card justify-content-center">Especializado</h5>
+                                        <h5 class="card-title text-center text-card justify-content-center">
+                                            Especializado</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card card-container" (click)="getCardInformation('tarjeta15', 'carousel3')" [routerLink]="'/formulario'">
+                                <div id="tarjeta15" class="card card-container"
+                                    (click)="getCardInformation('carousel3', 'tarjeta15')">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center text-card justify-content-center" >Profesional</h5>
+                                        <h5 class="card-title text-center text-card justify-content-center">Profesional
+                                        </h5>
                                     </div>
                                 </div>
                             </div>
@@ -190,6 +210,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <a class="boton-style" (click)="prevCarousel('carousel3')">
+                <fa-icon [icon]="faChevronLeft"></fa-icon>
+            </a>
+            <a class="boton-style" (click)="saveFirstData()" [routerLink]="'/formulario'">
+                <fa-icon [icon]="faChevronRight"></fa-icon>
+            </a>
         </div>
     </div>
 </div>
