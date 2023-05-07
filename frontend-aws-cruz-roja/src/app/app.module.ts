@@ -8,6 +8,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { AcogidaComponent } from './components/acogida/acogida.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormComponent } from './components/form/form.component';
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

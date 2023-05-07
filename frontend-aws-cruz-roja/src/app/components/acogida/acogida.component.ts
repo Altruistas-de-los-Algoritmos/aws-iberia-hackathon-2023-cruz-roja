@@ -21,9 +21,7 @@ export class AcogidaComponent {
     if(messageJson !== null){
       this.mensajesMap = new Map(JSON.parse(messageJson));
       this.mensajesMap.forEach((tarjeta)=> {
-        console.log(tarjeta);
           let element = document.getElementById(tarjeta);
-          console.log(element);
           element?.classList.add('card-container-selected');
       });
     }
