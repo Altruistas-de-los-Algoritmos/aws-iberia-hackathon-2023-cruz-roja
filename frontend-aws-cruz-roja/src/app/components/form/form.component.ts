@@ -75,4 +75,7 @@ export class FormComponent {
       this.validForm = true;
     }
   }
+  volver(){
+    localStorage.removeItem('carouselSelections');
+  }
 }
