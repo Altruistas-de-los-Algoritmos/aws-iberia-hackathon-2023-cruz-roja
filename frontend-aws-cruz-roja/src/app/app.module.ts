@@ -9,6 +9,8 @@ import { AcogidaComponent } from './components/acogida/acogida.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResumenComponent } from './components/resumen/resumen.component';
+import { MensajeComponent } from './components/mensaje/mensaje.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavBarComponent,
     InicioComponent,
     AcogidaComponent,
-    FormComponent
+    FormComponent,
+    ResumenComponent,
+    MensajeComponent
   ],
   imports: [
     BrowserModule,
