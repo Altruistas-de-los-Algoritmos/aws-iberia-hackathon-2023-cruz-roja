@@ -1,0 +1,51 @@
+.carousel-control-prev,
+.carousel-control-next {
+    color: black;
+}
+
+.carousel-control-prev{
+    
+}
+
+.chev-style {
+    color: black;
+    margin: 20px;
+}
+
+.fa-chevron-left {
+    height: 50px;
+}
+
+.card-container {
+    height: 250px;
+    color: white;
+    background-color: #C4291C;
+}
+
+.card-container-selected{
+    background-color: black;
+}
+
+.card-container:hover {
+    cursor: pointer;
+}
+
+.text-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.boton-style {
+    background-color: white;
+    font-size: 50px;
+    margin: 20px 50px;
+    cursor: pointer;
+}
+
+.carousel-indicators {
+    bottom: 120px;
+}
+
+

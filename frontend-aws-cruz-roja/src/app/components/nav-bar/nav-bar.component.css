@@ -1,0 +1,30 @@
+.logo-cruz {
+    width: 50px;
+    margin: 7px;
+}
+
+.col-content{
+    height: 100px;
+}
+
+.col-content:hover {
+    background-color: #E8B1AC;
+}
+
+.navbar-content {
+    background-color: #FCE2E0;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.font-nav {
+    font-size: 20px;
+    color: #5F0E08;
+}
+.font-nav-logo {
+    font-size: 25px;
+    color: #5F0E08;
+}
+  

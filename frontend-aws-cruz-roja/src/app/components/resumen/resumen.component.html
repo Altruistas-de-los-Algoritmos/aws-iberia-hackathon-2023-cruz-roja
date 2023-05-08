@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="card card-container" style="width: 18rem;" *ngFor="let selection of carouselSelection">
+            <div class="card-body">
+                <p class="card-text d-flex justify-content-center align-items-center">
+                    <app-mensaje [selection]="selection[1]"></app-mensaje>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

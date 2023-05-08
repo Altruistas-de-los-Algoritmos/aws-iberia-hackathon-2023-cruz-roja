@@ -1,0 +1,10 @@
+.size-labels{
+    margin: 0 160px;
+}
+
+.boton-style {
+    background-color: white;
+    font-size: 50px;
+    margin: 20px 50px;
+    cursor: pointer;
+}
